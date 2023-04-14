@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                               
+    "module": "CommonJS",                             
+    "resolveJsonModule": true,                        
+    "sourceMap": true,                                
+    "outDir": "out",                                  
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,         
+    "strict": true,                                   
+    "skipLibCheck": true                              
+  },
+  "include": ["./src/"]
+}

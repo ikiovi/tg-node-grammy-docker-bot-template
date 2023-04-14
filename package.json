@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "description": "",
+  "main": "./out/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "node ./out/bot.js"
+  },
+  "dependencies": {
+    "@grammyjs/i18n": "^1.0.1",
+    "@types/node": "^18.15.11",
+    "dotenv": "^16.0.3",
+    "grammy": "^1.15.3",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0"
+  }
+}
