@@ -7,15 +7,15 @@
     "start": "node ./out/bot.js"
   },
   "dependencies": {
-    "@grammyjs/i18n": "^1.0.1",
-    "@types/node": "^18.15.11",
-    "dotenv": "^16.0.3",
-    "grammy": "^1.15.3",
+    "@grammyjs/i18n": "^1.0.2",
+    "@types/node": "^18.19.26",
+    "dotenv": "^16.4.5",
+    "grammy": "^1.21.2",
     "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0"
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.57.0"
   }
 }

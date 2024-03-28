@@ -18,7 +18,7 @@ bot.use(session({ initial: () => ({}) }));
 bot.use(i18n);
 
 bot.on('message').command('start', ctx => {
-    ctx.reply(ctx.t('greeting', { userName: ctx.from.username ?? ctx.from.first_name }))
+    ctx.reply(ctx.t('greeting', { userName: ctx.from.username ?? ctx.from.first_name }));
 });
 
 bot.catch(err => {
