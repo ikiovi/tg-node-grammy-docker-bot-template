@@ -4,7 +4,7 @@
   "main": "./out/index.js",
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "start": "node ./out/bot.js"
+    "start": "node ./out/index.js"
   },
   "dependencies": {
     "@grammyjs/i18n": "^1.0.2",
