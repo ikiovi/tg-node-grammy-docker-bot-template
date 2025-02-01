@@ -27,7 +27,7 @@ npm start
 > **Note:** `Dockerfile` uses `npm ci` to install dependencies. Since it requires an existing `package-lock.json` file, you'll need to generate one. \
 Run `npm install` before building the Docker image.
 
-1. Open `docker-compose.yaml`
+1. Open [docker-compose.yaml][1]
 2. Replace the `container_name` placeholder
 3. Run the bot using [docker compose][2]
 
@@ -36,7 +36,7 @@ docker compose up -d
 ```
 
 [0]: https://github.com/grammyjs/grammY  
-[1]: docker-compose.yaml#L5  
+[1]: docker-compose.yaml#L3
 [2]: https://docs.docker.com/compose/
 [3]: .env.example
 [4]: https://core.telegram.org/bots/features#creating-a-new-bot
