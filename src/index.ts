@@ -19,10 +19,14 @@ bot.use(session({ initial: () => ({}) }));
 bot.use(i18n);
 
 bot.on('message').command('start', ctx => {
-    ctx.reply(ctx.t('greeting', { userName: ctx.from.username ?? ctx.from.first_name }));
+    ctx.reply(ctx.t('greeting', { userName: ctx.from.first_name }));
 });
 
 bot.catch(err => logger.error(err));
+
+// Concurrent processing is not shipped with the grammY core package. Instead, the grammY runner package can be used to run your bot
+// See https://grammy.dev/advanced/scaling#long-polling and https://grammy.dev/plugins/runner
+
 bot.start({ drop_pending_updates: true });
 
 process.once('SIGINT', bot.stop);

@@ -1,8 +1,9 @@
 import { I18nFlavor } from '@grammyjs/i18n';
 import { Context, SessionFlavor } from 'grammy';
 
-export type MyContext = Context & SessionFlavor<Session> & I18nFlavor;
+//See https://grammy.dev/plugins/session
+export type MyContext = Context & SessionFlavor<SessionData> & I18nFlavor;
 
-export interface Session {
+export interface SessionData {
     [key: string]: unknown;
 }
