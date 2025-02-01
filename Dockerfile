@@ -1,15 +1,19 @@
-FROM node:18.1-alpine as appbuild
+FROM node:23.7.0-alpine as appbuild
 
 WORKDIR /app
-COPY package*.json ./
+COPY --link package*.json ./
 RUN npm ci --omit=dev
-COPY . .
+COPY --link . .
+
 RUN npm run build
 
-FROM node:18.1-alpine
+
+FROM node:23.7.0-alpine
 
 WORKDIR /app
-COPY package*.json ./
+COPY --link package*.json ./
 COPY --from=appbuild /app/node_modules ./node_modules
 COPY --from=appbuild /app/out ./out
-CMD npm start
+COPY --from=appbuild /app/locales ./locales
+
+ENTRYPOINT ["npm", "start"]
